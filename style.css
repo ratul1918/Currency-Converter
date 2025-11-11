@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    background: linear-gradient(135deg, #5fdeba 0%, #3dd5a5 100%);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    min-height: 45vh;
+    width: 45vh;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.5s ease-out;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container h2 {
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+form {
+    margin: 2rem 0 1rem 0;
+}
+
+form select, button, input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+form input {
+    border: 2px solid transparent;
+    font-size: 1rem;
+    height: 3rem;
+    padding-left: 0.5rem;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+form input:focus {
+    border: 2px solid #04aa6d;
+    box-shadow: 0 0 15px rgba(4, 170, 109, 0.3);
+    transform: scale(1.02);
+}
+
+form input:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.select-container img {
+    max-width: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.select-container:hover img {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 8rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.select-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background-color: #f8f9fa;
+}
+
+.select-container select {
+    cursor: pointer;
+    padding: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.dropdown i { 
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: white;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dropdown i:hover {
+    transform: rotate(180deg) scale(1.2);
+    color: #04aa6d;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+.amount {
+    animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.amount p {
+    margin-bottom: 0.5rem;
+    color: white;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.from-currency, .to-currency {
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.from-currency p, .to-currency p {
+    margin-bottom: 0.5rem;
+    color: white;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 600;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.75rem;
+    animation: pulse 2s infinite;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+form button {
+    background: linear-gradient(135deg, #04aa6d 0%, #038a5a 100%);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 3rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(4, 170, 109, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+form button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+form button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(4, 170, 109, 0.5);
+    background: linear-gradient(135deg, #05c97f 0%, #04aa6d 100%);
+}
+
+form button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(4, 170, 109, 0.3);
+}
